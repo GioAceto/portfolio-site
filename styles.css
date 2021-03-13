@@ -21,7 +21,7 @@
             flex-direction: column;
         }
 
-        #icons-container {
+        #nav-bar {
             margin-bottom: 2rem;
             padding: 0.5rem 1rem 0.5rem 0;
             width: 100%;
@@ -38,6 +38,42 @@
             display: flex;
             align-items: center;
             list-style: none;
+        }
+
+        .nav-icon-close {
+            margin: 0 1rem;
+            width: 25px;
+        }
+
+        .nav-icon-close:after, 
+        .nav-icon-close:before, 
+        .nav-icon-close div {
+            background-color: black;
+            border-radius: 3px;
+            content: '';
+            display: block;
+            height: 2px;
+            margin: 7px 0;
+            transition: all .2s ease-in-out;
+        }
+
+        .nav-icon-close:hover,
+        .nav-icon-close:focus 
+        .nav-icon-open:hover,
+        .nav-icon-open:focus {
+            cursor: pointer;
+        }
+
+        .nav-icon-open:before {
+            transform: translateY(6px) rotate(135deg);
+        }
+
+        .nav-icon-open:after {
+            transform: translateY(-12px) rotate(-135deg);
+        }       
+
+        .nav-icon-open div {
+            transform: scale(0);
         }
 
         .social-icon {
