@@ -1,4 +1,5 @@
 const navIcon = document.querySelector(".nav-icon-close");
+const logo = document.querySelector("#ga-logo");
 
 function openNav() {
     navIcon.classList.add("nav-icon-open")
