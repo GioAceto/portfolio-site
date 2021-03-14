@@ -25,12 +25,14 @@
             margin-bottom: 2rem;
             padding: 0.5rem 1rem 0.5rem 0;
             width: 100%;
-            height: 2rem;
+            height: 3rem;
             display: flex;
             justify-content: flex-end;
             align-items: center;
             position: fixed;
-            background-color: #fdfdfd;
+            background: rgb(253,253,253);
+            background: linear-gradient(180deg, rgba(253,253,253,1) 0%, rgba(253,253,253,1) 63%, rgba(253,253,253,0.8278166118421053) 100%);
+            z-index: 2;
         }
 
         ul {
@@ -38,6 +40,7 @@
             display: flex;
             align-items: center;
             list-style: none;
+            z-index: 2;
         }
 
         .nav-icon-close {
@@ -55,6 +58,12 @@
             height: 2px;
             margin: 7px 0;
             transition: all .2s ease-in-out;
+        }
+
+        .color-change:after, 
+        .color-change:before, 
+        .color-change div {
+            background-color: #EA5E12 !important;
         }
 
         .nav-icon-close:hover,
@@ -83,7 +92,7 @@
         #name-container {
             width: 100%;
             text-align: center;
-            margin-bottom: 1rem;
+            margin: 2rem 0 1rem 0;
         }
 
         .profile-link {
@@ -124,3 +133,40 @@
         footer {
             height: 100rem;
         }
+
+
+        /* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  right: 0;
+  background-color: #EA5E12; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.3s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  margin: 5rem 0;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #fdfdfd;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #fdfdfd;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
