@@ -95,6 +95,10 @@
             margin: 2rem 0 1rem 0;
         }
 
+        #name-header {
+            letter-spacing: 0.05rem;
+        }
+
         .profile-link {
             margin: 0 1rem;
         }
@@ -124,6 +128,7 @@
             margin-bottom: 0.5rem;
             color: #E85a4f;
             font-weight: 700;
+            letter-spacing: 0.05rem;
         }
 
         p {
@@ -159,6 +164,7 @@
   display: block;
   transition: 0.3s;
   white-space: nowrap;
+  letter-spacing: 0.2rem;
 }
 
 /* When you mouse over the navigation links, change their color */
