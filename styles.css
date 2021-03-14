@@ -96,6 +96,7 @@
         }
 
         #name-header {
+            font-weight: 300;
             letter-spacing: 0.05rem;
         }
 
@@ -164,12 +165,17 @@
   display: block;
   transition: 0.3s;
   white-space: nowrap;
+  font-weight: 300;
   letter-spacing: 0.2rem;
 }
 
+
+
 /* When you mouse over the navigation links, change their color */
+.sidenav a:focus,
 .sidenav a:hover {
-  color: #fdfdfd;
+  font-weight: 400;
+  transition: 0s;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
