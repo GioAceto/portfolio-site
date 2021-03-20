@@ -1,0 +1,287 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Lato', sans-serif;
+        }
+
+        html {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+        body {
+            background-color: #fdfdfd;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+#intro-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #314455;
+}
+
+@keyframes showTopText {
+  0% { transform: translate3d(0, 100%, 0); }
+  40%, 60% { transform: translate3d(0, 50%, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+@keyframes showBottomText {
+  0% { transform: translate3d(-50%, 0, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+.animated-title {
+  color: #fdfdfd;
+  font-weight: 300;
+  font-size: 10vw;
+  letter-spacing: 0.15rem;
+  position: relative;
+  bottom: 15%;
+}
+.animated-title > div {
+  overflow: hidden;
+}
+.animated-title > div div {
+  font-size: 10vw;
+}
+.animated-title > div div span {
+  display: block;
+}
+
+.animated-title > div.text-top div {
+  animation: showTopText 1.5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  transform: translate(0, 100%);
+}
+.animated-title > div.text-top div span {
+  color: #fdfdfd;
+}
+
+.animated-title > div.text-bottom div {
+  animation: showBottomText 0.5s;
+  animation-delay: 2.4s;
+  animation-fill-mode: forwards;
+  transform: translate(0, -100%);
+  display: inline-block;
+  color: #e85a4f;
+}
+
+
+
+        header {
+            width: 100%;
+            height: 4rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #nav-bar {
+            margin-bottom: 2rem;
+            padding: 0.5rem 1rem 0.5rem 0;
+            width: 100%;
+            height: 3rem;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            position: fixed;
+            background: rgb(253,253,253);
+            background: linear-gradient(180deg, rgba(253,253,253,1) 0%, rgba(253,253,253,1) 63%, rgba(253,253,253,0.8278166118421053) 100%);
+            z-index: 2;
+        }
+
+        ul {
+            padding-right: 30px;
+            display: flex;
+            align-items: center;
+            list-style: none;
+            z-index: 2;
+        }
+        
+
+        .nav-icon-close {
+            margin: 0 1rem;
+            width: 25px;
+        }
+
+        .nav-icon-close:after, 
+        .nav-icon-close:before, 
+        .nav-icon-close div {
+            background-color: #314455;
+            border-radius: 3px;
+            content: '';
+            display: block;
+            height: 2px;
+            margin: 7px 0;
+            transition: all .2s ease-in-out;
+        }
+
+        .color-change:after, 
+        .color-change:before, 
+        .color-change div {
+            background-color: #e85a4f;
+        }
+
+        .nav-icon-close:hover,
+        .nav-icon-close:focus 
+        .nav-icon-open:hover,
+        .nav-icon-open:focus {
+            cursor: pointer;
+        }
+
+        .nav-icon-open:before {
+            transform: translateY(6px) rotate(135deg);
+        }
+
+        .nav-icon-open:after {
+            transform: translateY(-12px) rotate(-135deg);
+        }       
+
+        .nav-icon-open div {
+            transform: scale(0);
+        }
+
+        .social-icon {
+            width: 2rem;
+        }
+
+        #name-container {
+            width: 100%;
+            text-align: center;
+            margin: 2rem 0 1rem 0;
+        }
+
+        #name-header {
+            font-weight: 300;
+            letter-spacing: 0.05rem;
+        }
+
+        .profile-link {
+            margin: 0 1rem;
+        }
+
+        #profile-pic-circle {
+            width: 10rem;
+            height: 10rem;
+            background-image: url(profile-pic.jpeg);
+            background-size: cover;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+
+        #bio {
+            width: 75%;
+            text-align: center;
+            letter-spacing: 0.1rem;
+            line-height: 1.3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .section-header {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #E85a4f;
+            font-weight: 700;
+            letter-spacing: 0.05rem;
+        }
+
+        p {
+            font-weight: 300;
+        }
+
+        footer {
+            height: 100rem;
+        }
+
+
+        /* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  right: 0;
+  background-color: #E85a4f; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.3s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  margin: 5rem 0;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #fdfdfd;
+  display: block;
+  transition: 0.3s;
+  white-space: nowrap;
+  font-weight: 300;
+  letter-spacing: 0.2rem;
+}
+
+
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:focus,
+.sidenav a:hover {
+  font-weight: 400;
+  transition: 0s;
+}
+
+#email-menu {
+  height: 0%; /* 100% Full-height */
+  width: 100%; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1;
+  top: 0; /* Stay at the top */
+  right: 0;
+  background-color: #fdfdfd; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.3s; /* 0.5 second transition effect to slide in the sidenav */
+  display: flex;
+  justify-content: center;
+}
+
+#email-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h2 {
+    font-size: 1.5rem;
+  color: #e85a4f;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+  margin-bottom: 1rem;
+
+}
+
+label {
+    font-size: 1rem;
+    color: #314455;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+  margin-bottom: 0.5rem;
+}
+
+
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}

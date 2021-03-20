@@ -3,134 +3,95 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Giovanni Aceto Portfolio</title>
+    <title>Giovanni Aceto</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400&display=swap"
         rel="stylesheet">
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            font-family: 'Lato', sans-serif;
-        }
-
-        body {
-            padding: 1rem 0;
-            background-color: #fdfdfd;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        header {
-            width: 90%;
-            text-align: center;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            margin-bottom: 2rem;
-        }
-
-        #left-space {
-            width: 100%;
-        }
-
-        #name-container {
-            width: 100%;
-        }
-
-        #links-container {
-            width: 100%;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-        }
-
-        ul {
-            display: flex;
-            list-style: none;
-        }
-
-        .profile-link {
-            margin: 0 1rem;
-        }
-
-        a {
-            text-decoration: none;
-            color: black;
-        }
-
-        a:hover,
-        a:focus {
-            text-decoration: underline;
-            color: #EA5E12;
-        }
-
-        #profile-pic-circle {
-            width: 12rem;
-            height: 12rem;
-            background-color: gray;
-            border-radius: 50%;
-            margin-bottom: 1rem;
-        }
-
-        #bio {
-            width: 50%;
-            text-align: center;
-            letter-spacing: 0.1rem;
-            line-height: 1.3rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .section-header {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-            color: #EA5E12;
-            font-weight: 700;
-        }
-
-        p {
-            font-weight: 300;
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <div id="mySidenav" class="sidenav">
+        <a href="#">About Me</a>
+        <a href="#">Projects</a>
+        <a href="#">Résumé</a>
+        <a href="#">Contact Me</a>
+    </div>
     <header>
-        <div id="left-space">
-
-        </div>
-        <div id="name-container">
-            <h1>Giovanni Aceto</h1>
-        </div>
-        <div id="links-container">
+        <div id="nav-bar">
             <ul>
-                <li><a class="profile-link" href="https://github.com/GioAceto" target="_blank">GitHub</a></li>
-                <li><a class="profile-link" href="https://www.linkedin.com/in/giovanniaceto/"
-                        target="_blank">LinkedIn</a></li>
+                <li>
+                    <a class="profile-link" href="https://github.com/GioAceto" target="_blank">
+                        <img class="icon social-icon" src="Github.svg">
+                    </a>
+                </li>
+                <li>
+                    <a class="profile-link" href="https://www.linkedin.com/in/giovanniaceto/" target="_blank">
+                        <img class="icon social-icon" src="Linkedin.svg">
+                    </a>
+                </li>
+                <li>
+                    <a class="icon profile-link email-link" href="#" target="">
+                        <img src="Email.svg" class="email-icon">
+                    </a>
+                </li>
             </ul>
+            <div class="nav-icon-close">
+                <div></div>
+            </div>
         </div>
     </header>
+    <div id="email-menu">
+        <form id="email-form">
+            <h2>Let's Connect!</h2>
+            <label>Name:</label>
+            <input type="text">
+            <label>Email:</label>
+            <input type="text">
+            <label>Send me a message:</label>
+            <textarea></textarea>
+        </form>
+    </div>
+    <div id="intro-section">
+
+
+
+        <div class="animated-title">
+            <div class="text-top">
+                <div>
+                    <span>Hi!</span>
+                    <span>I'm Giovanni.</span>
+                </div>
+            </div>
+            <div class="text-bottom">
+                <div>Web Developer.</div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <div id="name-container">
+        <h1 id="name-header">Giovanni Aceto</h1>
+    </div>
     <section id="bio">
         <div id="profile-pic-circle">
-            <img src="#" alt="profile picture here">
         </div>
         <h2 class="section-header">About Me</h2>
-        <p>Hi I'm Giovanni! I am an aspiring web developer living in Portland, Maine.
+        <p>Hi I'm Giovanni! I'm a web developer living in Portland, Maine.
             I have experience with HTML, CSS, & JavaScript. I am currently enrolled
             in the Stack Education Bootcamp and I hope to build some cool projects
             and learn a lot more!</p>
     </section>
+    <script src="portfolio.js"></script>
     <footer>
 
     </footer>
-    </body>
+</body>
+
 </html>
