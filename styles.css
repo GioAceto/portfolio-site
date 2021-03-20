@@ -63,19 +63,14 @@
   color: #fdfdfd;
 }
 
-.animated-title > div.text-bottom div,
-.animated-title > div.text-bottom div span {
+.animated-title > div.text-bottom div {
   animation: showBottomText 0.5s;
   animation-delay: 2.4s;
   animation-fill-mode: forwards;
   transform: translate(0, -100%);
   display: inline-block;
+  color: #e85a4f;
 }
-
-.highlight {
-    color: #e85a4f;
-}
-
 
 
 
@@ -108,6 +103,7 @@
             list-style: none;
             z-index: 2;
         }
+        
 
         .nav-icon-close {
             margin: 0 1rem;
@@ -226,7 +222,7 @@
   margin: 5rem 0;
   padding: 8px 8px 8px 32px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 1.5rem;
   color: #fdfdfd;
   display: block;
   transition: 0.3s;
@@ -243,6 +239,46 @@
   font-weight: 400;
   transition: 0s;
 }
+
+#email-menu {
+  height: 0%; /* 100% Full-height */
+  width: 100%; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1;
+  top: 0; /* Stay at the top */
+  right: 0;
+  background-color: #fdfdfd; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.3s; /* 0.5 second transition effect to slide in the sidenav */
+  display: flex;
+  justify-content: center;
+}
+
+#email-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h2 {
+    font-size: 1.5rem;
+  color: #e85a4f;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+  margin-bottom: 1rem;
+
+}
+
+label {
+    font-size: 1rem;
+    color: #314455;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+  margin-bottom: 0.5rem;
+}
+
+
+
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
